@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.7/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nicolocarpignoli/aframe-barcode-component@master/dist/aframe-barcode-component.min.js"></script>
+    </script>
+</head>
+
+<body>
+    <a-scene embedded arjs="debugUIEnabled:false; detectionMode:mono_and_matrix; matrixCodeType:3x3;" vr-mode-ui="enabled:false" gesture-detector>
+        <a-assets>
+            <!-- Modelos -->
+            <a-asset-item id="charmander-obj" src="imgs/charmander.obj"></a-asset-item>
+            <a-asset-item id="charmander-mtl" src="imgs/charmander.mtl"></a-asset-item>
+            <a-asset-item id="diglett-obj" src="imgs/diglett.obj"></a-asset-item>
+            <a-asset-item id="diglett-mtl" src="imgs/diglett.mtl"></a-asset-item>
+            <a-asset-item id="cubone-obj" src="imgs/cubone.obj"></a-asset-item>
+            <a-asset-item id="cubone-mtl" src="imgs/cubone.mtl"></a-asset-item>
+            <!-- Texturas para el cubo -->
+            <img id="cara1" src="imgarte/Alien.png">
+            <img id="cara2" src="imgarte/hallween.png">
+            <img id="cara3" src="imgarte/oso.png">
+            <img id="cara4" src="imgarte/Paisaje.png">
+            <img id="cara5" src="imgarte/Escenario.png">
+            <img id="cara6" src="imgarte/Paisaje.png">
+            <!-- Texturas de caras -->
+            <img id="cara7" src="imgarte/Cara1.png">
+            <img id="cara8" src="imgarte/Cara2.png">
+            <img id="cara9" src="imgarte/Cara3.png">
+            <img id="cara10" src="imgarte/Cara4.png">
+            <img id="cara11" src="imgarte/Cara5.png">
+            <img id="cara12" src="imgarte/Cara6.png">
+        </a-assets>
+
+
+        <a-marker type="barcode" value="0">
+            <a-entity position="0 0.5 0" gesture-handler>
+                <!-- Cubo base transparente -->
+                <a-box 
+                    position="0 0 0" 
+                    scale="1 1 1" 
+                    material="color: white; opacity: 0; side: double;">
+                </a-box>
+        
+                <!-- Cara frontal -->
+                <a-plane 
+                    src="#cara1" 
+                    position="0 0 0.5" 
+                    rotation="0 0 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+        
+                <!-- Cara trasera -->
+                <a-plane 
+                    src="#cara2" 
+                    position="0 0 -0.5" 
+                    rotation="0 180 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+        
+                <!-- Cara izquierda -->
+                <a-plane 
+                    src="#cara3" 
+                    position="-0.5 0 0" 
+                    rotation="0 90 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+        
+                <!-- Cara derecha -->
+                <a-plane 
+                    src="#cara4" 
+                    position="0.5 0 0" 
+                    rotation="0 -90 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+        
+                <!-- Cara superior -->
+                <a-plane 
+                    src="#cara5" 
+                    position="0 0.5 0" 
+                    rotation="-90 0 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+        
+                <!-- Cara inferior -->
+                <a-plane 
+                    src="#cara6" 
+                    position="0 -0.5 0" 
+                    rotation="90 0 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+            </a-entity>
+        </a-marker>
+
+
+
+        <a-marker type="barcode" value="1">
+            <a-entity position="0 0.5 0" gesture-handler>
+                <!-- Cubo base transparente -->
+                <a-box 
+                    position="0 0 0" 
+                    scale="1 1 1" 
+                    material="color: white; opacity: 0; side: double;">
+                </a-box>
+        
+                <!-- Cara frontal -->
+                <a-plane 
+                    src="#cara7" 
+                    position="0 0 0.5" 
+                    rotation="0 0 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+        
+                <!-- Cara trasera -->
+                <a-plane 
+                    src="#cara8" 
+                    position="0 0 -0.5" 
+                    rotation="0 180 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+        
+                <!-- Cara izquierda -->
+                <a-plane 
+                    src="#cara9" 
+                    position="-0.5 0 0" 
+                    rotation="0 90 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+        
+                <!-- Cara derecha -->
+                <a-plane 
+                    src="#cara10" 
+                    position="0.5 0 0" 
+                    rotation="0 -90 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+        
+                <!-- Cara superior -->
+                <a-plane 
+                    src="#cara11" 
+                    position="0 0.5 0" 
+                    rotation="-90 0 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+        
+                <!-- Cara inferior -->
+                <a-plane 
+                    src="#cara12" 
+                    position="0 -0.5 0" 
+                    rotation="90 0 0" 
+                    width="1" 
+                    height="1" 
+                    material="opacity: 1; side: double;">
+                </a-plane>
+            </a-entity>
+        </a-marker>
+
+        <a-marker type="barcode" value="2">
+            <a-entity position="0 0.5 0" gesture-handler>
+                <!-- Fondo blanco -->
+                <a-plane 
+                    position="0 0 0" 
+                    width="1" 
+                    height="1" 
+                    material="color: white; side: double;">
+                </a-plane>
+        
+                <!-- GIF en el centro -->
+                <a-plane 
+                    src="imgarte/Personaje1.gif" 
+                    position="0 0 0.01" 
+                    width="0.8" 
+                    height="0.8" 
+                    material="side: double;">
+                </a-plane>
+            </a-entity>
+        </a-marker>
+        
+        <a-marker type="barcode" value="3">
+            <a-entity position="0 0.5 0" gesture-handler>
+                <!-- Fondo blanco -->
+                <a-plane 
+                    position="0 0 0" 
+                    width="1.5" 
+                    height="1" 
+                    material="color: white; side: double;">
+                </a-plane>
+        
+                <!-- Texto explicativo -->
+                <a-text 
+                    value="Creación de Sprites y Animaciones 2D" 
+                    position="-0.4 0.3 0.01" 
+                    width="1" 
+                    color="black">
+                </a-text>
+        
+                <a-text 
+                    value="Se usan hojas de sprites con múltiples frames que representan los distintos estados de animación." 
+                    position="-0.4 -0.1 0.01" 
+                    width="0.8" 
+                    color="black">
+                </a-text>
+        
+                <!-- Imagen ilustrativa -->
+                <a-plane 
+                    src="ruta_de_la_imagen.png" 
+                    position="0.5 0 0.01" 
+                    width="0.6" 
+                    height="0.6" 
+                    material="side: double;">
+                </a-plane>
+            </a-entity>
+        </a-marker>
+
+
+
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
