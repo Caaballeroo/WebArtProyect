@@ -237,6 +237,42 @@
             </a-entity>
         </a-marker>
 
+        <a-marker type="barcode" value="4">
+            <a-entity position="0 0.5 0" gesture-handler>
+                <!-- Fondo blanco -->
+                <a-plane 
+                    position="0 0 0" 
+                    width="1.5" 
+                    height="1" 
+                    material="color: white; side: double;">
+                </a-plane>
+        
+                <!-- Texto explicativo -->
+                <a-text 
+                    value="Creacion niveles usando Tiles" 
+                    position="-0.4 0.3 0.01" 
+                    width="1" 
+                    color="black">
+                </a-text>
+        
+                <a-text 
+                    value="Los tilesets permiten diseñar escenarios para videojuegos en 2D." 
+                    position="-0.4 -0.1 0.01" 
+                    width="0.8" 
+                    color="black">
+                </a-text>
+        
+                <!-- Imagen ilustrativa -->
+                <a-plane 
+                    src="imgarte/TileSetAmpliado.png" 
+                    position="0.5 0 0.01" 
+                    width="0.6" 
+                    height="0.6" 
+                    material="side: double;">
+                </a-plane>
+            </a-entity>
+        </a-marker>
+
 
         <a-marker type="barcode" value="5">
             <a-entity position="0 0.5 0" gesture-handler>
